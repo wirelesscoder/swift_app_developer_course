@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet var NavBar: UINavigationBar!
+    
     //webView to show webContent
     @IBOutlet var webView: UIWebView!
     

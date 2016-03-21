@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,27 +17,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="daM-82-VzM">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="35c-N5-eCD">
+                                <rect key="frame" x="0.0" y="24" width="375" height="44"/>
+                                <color key="barTintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Stackoverflow" id="ZVL-wA-S02"/>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="daM-82-VzM">
+                                <rect key="frame" x="0.0" y="68" width="375" height="599"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="daM-82-VzM" secondAttribute="trailing" constant="-20" id="7zM-Zc-XNW"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="daM-82-VzM" secondAttribute="bottom" id="OkL-q4-Rje"/>
-                            <constraint firstItem="daM-82-VzM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="dRZ-Fk-C2n"/>
-                            <constraint firstItem="daM-82-VzM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="f4m-fs-j4B"/>
+                            <constraint firstItem="35c-N5-eCD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="4" id="0P1-ui-0Ut"/>
+                            <constraint firstItem="daM-82-VzM" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="0dT-ar-FRj"/>
+                            <constraint firstAttribute="trailing" secondItem="35c-N5-eCD" secondAttribute="trailing" id="5s9-yp-sMX"/>
+                            <constraint firstItem="daM-82-VzM" firstAttribute="trailing" secondItem="35c-N5-eCD" secondAttribute="trailing" id="A4R-Vu-icZ"/>
+                            <constraint firstItem="daM-82-VzM" firstAttribute="leading" secondItem="35c-N5-eCD" secondAttribute="leading" id="OIu-k6-E5r"/>
+                            <constraint firstItem="35c-N5-eCD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qze-cp-Ni0"/>
+                            <constraint firstItem="daM-82-VzM" firstAttribute="top" secondItem="35c-N5-eCD" secondAttribute="bottom" id="fiy-tG-Tbu"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="NavBar" destination="35c-N5-eCD" id="oTb-Ud-6RY"/>
                         <outlet property="webView" destination="daM-82-VzM" id="ag7-i3-Pho"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304.5" y="327.5"/>
+            <point key="canvasLocation" x="304.5" y="333.5"/>
         </scene>
     </scenes>
 </document>
